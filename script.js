@@ -94,3 +94,13 @@ let order1 = (time, work) => {
 function watch() {
     location.href = 'https://www.lays.uz/o-lays/'
 }
+
+
+
+order(2000, () => console.log('meva tanlandi'))
+.then(() => {
+    return order(1000, () => console.log('p started'))
+})
+.then(() => {
+    return order(1000, () => console.log('water and ice added'))
+})
